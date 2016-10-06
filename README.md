@@ -5,8 +5,6 @@ with a colored border on the input element.
 
 ## Configuration
 
-The `min` and `max` options are required!
-
 | Option        | Description                            |
 |---------------|----------------------------------------|
 | `min`         | Minimal length                         |
