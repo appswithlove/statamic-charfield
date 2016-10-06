@@ -1,8 +1,13 @@
 Vue.component('char_field-fieldtype', {
 
-  template: '<small class="help-block" v-if="optimalMin || optimalMax">\n    ' +
-  '<p>\n      <span v-if="optimalMin && optimalMax">{{ optimalMin }} bis {{ optimalMax }} Zeichen</span>\n      <span v-if="optimalMin && !optimalMax">min. {{ optimalMin }} Zeichen</span>\n      <span v-if="!optimalMin && optimalMax">max. {{ optimalMax }} Zeichen</span>\n      <span>(Aktuell: {{ data.length }})</span>\n    </p>\n</small>\n' +
-  '<input type="text" :class="classes" v-model="data" />',
+  template: '<small class="help-block" v-if="optimalMin || optimalMax">\n  ' +
+  '<p>\n    ' +
+  '<span v-if="optimalMin && optimalMax">{{ optimalMin }} bis {{ optimalMax }} Zeichen</span>\n    ' +
+  '<span v-if="optimalMin && !optimalMax">min. {{ optimalMin }} Zeichen</span>\n    ' +
+  '<span v-if="!optimalMin && optimalMax">max. {{ optimalMax }} Zeichen</span>\n    ' +
+  '<span>(Aktuell: {{ data.length }})</span>\n  ' +
+  '</p>\n</small>\n' +
+  '<input type="text" :class="classes" v-model="data"/>',
 
   props: ['name', 'data', 'config'],
 
