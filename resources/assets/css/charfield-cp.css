@@ -1,0 +1,15 @@
+.type-char_field {
+    border: 1px solid transparent;
+}
+
+.type-char_field.status-low,
+.type-char_field.status-high {
+    border-color: red;
+}
+
+.type-char_field.status-ok {
+    border-color: orange;
+}
+.type-char_field.status-good {
+    border-color: green;
+}

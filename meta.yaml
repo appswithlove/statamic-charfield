@@ -1,0 +1,16 @@
+name: CharField
+version: 0.1
+description: Textfield with visual feedback for length
+url: https://subpixel.ch
+developer: Rémy Böhler
+developer_url: http://subpixel.ch
+
+fieldtype_fields:
+  low:
+    type: text
+  high:
+    type: text
+  optimal_min:
+    type: text
+  optimal_max:
+    type: text
