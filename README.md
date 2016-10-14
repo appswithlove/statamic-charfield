@@ -11,6 +11,7 @@ with a colored border on the input element.
 | `max`         | Maximal length                         |
 | `optimal_min` | Optional min length for optimal result |
 | `optimal_max` | Optional max length for optimal result |
+| `hard_limit`  | Maxlength for input field              |
 
 * If the length is outside of min and max the color is **red**.
 * If the length is between min and max but not between the optimal length **orange**

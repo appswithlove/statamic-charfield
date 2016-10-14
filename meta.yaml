@@ -14,3 +14,5 @@ fieldtype_fields:
     type: text
   optimal_max:
     type: text
+  hard_limit:
+    type: text
