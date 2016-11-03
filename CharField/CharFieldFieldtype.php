@@ -1,9 +1,16 @@
 <?php
+/**
+ * @author Rémy M. Böhler
+ */
 
 namespace Statamic\Addons\CharField;
 
 use Statamic\Extend\Fieldtype;
 
+/**
+ * Class CharFieldFieldtype
+ * @package Statamic\Addons\CharField
+ */
 class CharFieldFieldtype extends Fieldtype
 {
     /**

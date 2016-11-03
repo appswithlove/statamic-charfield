@@ -1,5 +1,6 @@
 .type-char_field {
-    border: 1px solid transparent;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 7px;
 }
 
 .type-char_field.status-low,

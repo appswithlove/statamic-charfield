@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'input_type' => 'Input type',
     'low' => 'Min chars',
     'high' => 'Max chars',
     'optimal_min' => 'Optimal min chars',

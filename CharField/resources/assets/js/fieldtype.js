@@ -1,54 +1,61 @@
 Vue.component('char_field-fieldtype', {
 
-  template: '<small class="help-block" v-if="optimalMin || optimalMax || high">\n  ' +
-  '<p>\n    ' +
-  '<span v-if="optimalMin && optimalMax">{{ optimalMin }} bis {{ optimalMax }} Zeichen</span>\n    ' +
-  '<span v-if="optimalMin && !optimalMax">min. {{ optimalMin }} Zeichen</span>\n    ' +
-  '<span v-if="!optimalMin && (optimalMax || high)">max. {{ optimalMax || high }} Zeichen</span>\n    ' +
-  '<span>(Aktuell: {{ data.length || 0 }})</span>\n  ' +
-  '</p>\n</small>\n' +
-  '<input type="text" :class="classes" :maxlength="maxlength" v-model="data"/>',
+    template: '<input v-if="isInput" type="text" :class="classes" :maxlength="maxlength" v-model="data"/>\n' +
+    '<textarea v-if="isTextarea" :class="classes" :maxlength="maxlength" v-model="data"></textarea>\n\n' +
+    '<div class="help-block" v-if="optimalMin || optimalMax || high">\n    ' +
+    '<p>\n        ' +
+    '<small v-if="optimalMin && optimalMax">Ideal {{ optimalMin }} bis {{ optimalMax }} Zeichen</small>\n        ' +
+    '<small v-if="optimalMin && !optimalMax">min. {{ optimalMin }} Zeichen</small>\n        ' +
+    '<small v-if="!optimalMin && (optimalMax || high)">max. {{ optimalMax || high }} Zeichen</small>\n        ' +
+    '<small>&#10145; Aktuell <strong>{{ dataLength || 0 }}</strong></small>\n    ' +
+    '</p>\n</div>',
 
-  props: ['name', 'data', 'config'],
+    props: ['name', 'data', 'config'],
 
-  data: function () {
-    return {
-      status: 'loading',
-      low: this.config.low,
-      high: this.config.high || this.config.hard_limit,
-      optimalMin: this.config.optimal_min || this.config.low,
-      optimalMax: this.config.optimal_max || this.config.high,
-      hardLimit: this.config.hard_limit
-    };
-  },
-
-  computed: {
-    classes: function () {
-      return 'form-control type-' + this.config.type + ' status-' + this.status;
+    data: function () {
+        return {
+            status: 'loading',
+            isTextarea: this.config.input_type == 'textarea',
+            isInput: this.config.input_type != 'textarea',
+            low: this.config.low,
+            high: this.config.high || this.config.hard_limit,
+            optimalMin: this.config.optimal_min || this.config.low,
+            optimalMax: this.config.optimal_max || this.config.high,
+            hardLimit: this.config.hard_limit
+        };
     },
 
-    maxlength: function () {
-      return this.config.hard_limit;
-    },
+    computed: {
+        classes: function () {
+            return 'form-control type-' + this.config.type + ' status-' + this.status;
+        },
 
-    status: function () {
-      var length = this.data.length;
+        maxlength: function () {
+            return this.config.hard_limit;
+        },
 
-      if (this.low !== false && length < this.low) {
-        return 'low'
-      } else if (this.high !== false && length > this.high) {
-        return 'high';
-      }
+        dataLength: function () {
+            return this.data.length || 0;
+        },
 
-      if (this.optimalMin && this.optimalMax) {
-        if (length >= this.optimalMin && length <= this.optimalMax) {
-          return 'good';
+        status: function () {
+            var length = this.data.length;
+
+            if (this.low !== false && length < this.low) {
+                return 'low'
+            } else if (this.high !== false && length > this.high) {
+                return 'high';
+            }
+
+            if (this.optimalMin && this.optimalMax) {
+                if (length >= this.optimalMin && length <= this.optimalMax) {
+                    return 'good';
+                }
+
+                return 'ok';
+            }
+
+            return 'good';
         }
-
-        return 'ok';
-      }
-
-      return 'good';
     }
-  }
 });
