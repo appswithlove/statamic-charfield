@@ -4,10 +4,10 @@ Vue.component('char_field-fieldtype', {
     '<textarea v-if="isTextarea" :class="classes" :maxlength="maxlength" v-model="data"></textarea>\n\n' +
     '<div class="help-block" v-if="optimalMin || optimalMax || high">\n    ' +
     '<p>\n        ' +
-    '<small v-if="optimalMin && optimalMax">Ideal {{ optimalMin }} bis {{ optimalMax }} Zeichen</small>\n        ' +
-    '<small v-if="optimalMin && !optimalMax">min. {{ optimalMin }} Zeichen</small>\n        ' +
-    '<small v-if="!optimalMin && (optimalMax || high)">max. {{ optimalMax || high }} Zeichen</small>\n        ' +
-    '<small>&gt; Aktuell <strong>{{ dataLength || 0 }}</strong></small>\n    ' +
+    '<small v-if="optimalMin && optimalMax">{{ translate("addons.CharField::fieldtypes.ideal_x", {min: optimalMin, max: optimalMax}) }}</small>\n        ' +
+    '<small v-if="optimalMin && !optimalMax">{{ translate("addons.CharField::fieldtypes.min_x", {min: optimalMin}) }}</small>\n        ' +
+    '<small v-if="!optimalMin && (optimalMax || high)">{{ translate("addons.CharField::fieldtypes.max_x", {max: optimalMax || high}) }}</small>\n        ' +
+    '<small>&gt; {{ translate("addons.CharField::fieldtypes.current") }} <strong>{{ dataLength || 0 }}</strong></small>\n    ' +
     '</p>\n</div>',
 
     props: ['name', 'data', 'config'],
