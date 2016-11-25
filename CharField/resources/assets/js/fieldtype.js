@@ -7,7 +7,7 @@ Vue.component('char_field-fieldtype', {
     '<small v-if="optimalMin && optimalMax">Ideal {{ optimalMin }} bis {{ optimalMax }} Zeichen</small>\n        ' +
     '<small v-if="optimalMin && !optimalMax">min. {{ optimalMin }} Zeichen</small>\n        ' +
     '<small v-if="!optimalMin && (optimalMax || high)">max. {{ optimalMax || high }} Zeichen</small>\n        ' +
-    '<small>> Aktuell <strong>{{ dataLength || 0 }}</strong></small>\n    ' +
+    '<small>&gt; Aktuell <strong>{{ dataLength || 0 }}</strong></small>\n    ' +
     '</p>\n</div>',
 
     props: ['name', 'data', 'config'],
