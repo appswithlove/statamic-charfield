@@ -1,4 +1,4 @@
-# Statamic Char counting field
+# Statamic Char counting field ![Statamic 2](https://img.shields.io/badge/statamic-2.x-blue.svg?style=flat-square)
 
 A field which can does hint the status of the length
 with a colored border on the input element.
