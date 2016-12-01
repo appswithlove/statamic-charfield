@@ -1,7 +1,9 @@
 # Statamic Char counting field ![Statamic 2](https://img.shields.io/badge/statamic-2.x-blue.svg?style=flat-square)
 
-A field which can does hint the status of the length
-with a colored border on the input element.
+A input field or textarea which shows the status of the length
+with colored feedback on the input element.
+
+![Extended Section](./screenshot.png)
 
 ## Configuration
 
