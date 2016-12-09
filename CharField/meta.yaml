@@ -1,7 +1,7 @@
 name: CharField
 version: 0.2
 description: Textfield with visual feedback for length
-url: https://subpixel.ch
+url: https://github.com/subpixel-ch/statamic-charfield
 developer: Rémy Böhler
 developer_url: https://subpixel.ch
 
