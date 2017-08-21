@@ -1,5 +1,9 @@
 # Statamic Char counting field ![Statamic 2](https://img.shields.io/badge/statamic-2.x-blue.svg?style=flat-square)
 
+[![StyleCI](https://styleci.io/repos/75275215/shield?branch=master)](https://styleci.io/repos/75275215)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/badges/build.png?b=master)](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/build-status/master)
+
 A input field or textarea which shows the status of the length
 with colored feedback on the input element.
 

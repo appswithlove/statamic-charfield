@@ -1,3 +1,5 @@
+/** global: Vue */
+
 Vue.component('char_field-fieldtype', {
 
     template: '<input v-if="isInput" type="text" :class="classes" :maxlength="config.hard_limit" v-model="data"/>\n' +
