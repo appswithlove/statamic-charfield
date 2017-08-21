@@ -3,6 +3,7 @@
 [![StyleCI](https://styleci.io/repos/75275215/shield?branch=master)](https://styleci.io/repos/75275215)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/badges/build.png?b=master)](https://scrutinizer-ci.com/g/subpixel-ch/statamic-charfield/build-status/master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/70eda7b1-4d5c-4255-bdb2-edcb5dbd0662/mini.png)](https://insight.sensiolabs.com/projects/70eda7b1-4d5c-4255-bdb2-edcb5dbd0662)
 
 A input field or textarea which shows the status of the length
 with colored feedback on the input element.
