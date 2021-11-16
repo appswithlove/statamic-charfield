@@ -1,7 +1,6 @@
 # Statamic Char counting field ![Statamic 2](https://img.shields.io/badge/statamic-2.x-blue.svg?style=flat-square)
 
 [![StyleCI](https://styleci.io/repos/75275215/shield?branch=master)](https://styleci.io/repos/75275215)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/70eda7b1-4d5c-4255-bdb2-edcb5dbd0662/mini.png)](https://insight.sensiolabs.com/projects/70eda7b1-4d5c-4255-bdb2-edcb5dbd0662)
 
 A input field or textarea which shows the status of the length
 with colored feedback on the input element.
