@@ -1,0 +1,30 @@
+{
+  "name": "appswithlove/statamic-charfield",
+  "license": "MIT",
+  "type": "statamic-addon",
+  "description": "Character counting field for statamic v3",
+  "autoload": {
+    "psr-4": {
+      "AppsWithLove\\Statamic\\CharField\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Rémy Böhler"
+    }
+  ],
+  "require": {
+    "statamic/cms": "~3.1.7 || 3.2.*"
+  },
+  "extra": {
+    "statamic": {
+      "name": "src",
+      "description": "Character counting field"
+    },
+    "laravel": {
+      "providers": [
+        "AppsWithLove\\Statamic\\CharField\\ServiceProvider"
+      ]
+    }
+  }
+}

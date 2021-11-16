@@ -1,2 +1,7 @@
 node_modules
 .idea
+.DS_Store
+composer.lock
+/vendor
+mix-manifest.json
+.phpunit.result.cache

@@ -1,0 +1,19 @@
+.charfield-container {
+  --input-border-color: hsl(210, 15%, 80%);
+}
+
+.charfield-container.status-good {
+  --input-border-color: #479967;
+}
+.charfield-container.status-ok {
+  --input-border-color: #d8cd1b;
+}
+.charfield-container.status-low,
+.charfield-container.status-high {
+  --input-border-color: hsl(2, 76%, 60%);
+}
+
+.charfield-container .input-text {
+  border-color: var(--input-border-color);
+  border-bottom-width: 3px;
+}
