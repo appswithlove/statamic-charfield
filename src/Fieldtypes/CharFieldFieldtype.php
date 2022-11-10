@@ -16,7 +16,7 @@ class CharFieldFieldtype extends Fieldtype
                 'type' => 'select',
                 'default' => 'input',
                 'options' => [
-                    'input' => 'Input',
+                    'text' => 'Input',
                     'textarea' => 'Textarea',
                 ]
             ],
