@@ -2,7 +2,7 @@
   "name": "appswithlove/statamic-charfield",
   "license": "MIT",
   "type": "statamic-addon",
-  "description": "Character counting field for statamic v3",
+  "description": "Character counting field for statamic v3 and v4",
   "autoload": {
     "psr-4": {
       "AppsWithLove\\Statamic\\CharField\\": "src"
@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "statamic/cms": "~3.1.7 || 3.2.* || 3.3.* || 3.4.* || 4.0.* || 4.1.* || 4.2.* || 4.3.* || 4.4.*"
+    "statamic/cms": "~3.1.7 || 3.2.* || 3.3.* || 3.4.* || 4.0.* || 4.1.* || 4.2.* || 4.3.* || 4.34.*"
   },
   "extra": {
     "statamic": {
