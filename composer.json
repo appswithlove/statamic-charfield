@@ -26,5 +26,13 @@
         "AppsWithLove\\Statamic\\CharField\\ServiceProvider"
       ]
     }
+  },
+  "require-dev": {
+    "laravel/pint": "^1.18"
+  },
+  "config": {
+    "allow-plugins": {
+      "pixelfear/composer-dist-plugin": true
+    }
   }
 }
