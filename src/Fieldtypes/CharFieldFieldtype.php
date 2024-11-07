@@ -18,7 +18,7 @@ class CharFieldFieldtype extends Fieldtype
                 'options' => [
                     'text' => 'Input',
                     'textarea' => 'Textarea',
-                ]
+                ],
             ],
             'low' => [
                 'display' => __('statamic-charfield::fieldtypes.low'),
