@@ -1,7 +1,8 @@
-node_modules
-.idea
 .DS_Store
+node_modules
+.env
 composer.lock
 /vendor
-mix-manifest.json
 .phpunit.result.cache
+.phpunit.cache
+.idea/
