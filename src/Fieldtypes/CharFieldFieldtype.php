@@ -7,10 +7,20 @@ use Statamic\Fields\Fieldtype;
 class CharFieldFieldtype extends Fieldtype
 {
     protected $icon = 'integer';
+    protected $component = 'char_field';
 
     protected function configFieldItems(): array
     {
         return [
+            'translations' => [
+                'type' => 'array',
+                'default' => [
+                    'ideal_x' => __('statamic-charfield::fieldtypes.ideal_x'),
+                    'min_x' => __('statamic-charfield::fieldtypes.min_x'),
+                    'max_x' => __('statamic-charfield::fieldtypes.max_x'),
+                    'current' => __('statamic-charfield::fieldtypes.current'),
+                ],
+            ],
             'input_type' => [
                 'display' => __('statamic-charfield::fieldtypes.input_type'),
                 'type' => 'select',

@@ -7,6 +7,12 @@ use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
+    public function boot()
+    {
+        parent::boot();
+
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'statamic-charfield');
+    }
     protected $scripts = [
         __DIR__.'/../resources/js/fieldtype.js',
     ];

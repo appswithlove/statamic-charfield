@@ -13,7 +13,8 @@
   --input-border-color: hsl(2, 76%, 60%);
 }
 
-.charfield-container .input-text {
+.charfield-container input,
+.charfield-container textarea {
   border-color: var(--input-border-color);
   border-bottom-width: 3px;
 }
