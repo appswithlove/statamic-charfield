@@ -13,7 +13,7 @@ class CharFieldFieldtype extends Fieldtype
     {
         return [
             'translations' => [
-                'type' => 'array',
+                'type' => 'hidden',
                 'default' => [
                     'ideal_x' => __('statamic-charfield::fieldtypes.ideal_x'),
                     'min_x' => __('statamic-charfield::fieldtypes.min_x'),
