@@ -9,18 +9,20 @@ class CharFieldFieldtype extends Fieldtype
     protected $icon = 'integer';
     protected $component = 'char_field';
 
+    public function preload(): array
+    {
+        return [
+            'ideal_x' => __('statamic-charfield::fieldtypes.ideal_x'),
+            'min_x' => __('statamic-charfield::fieldtypes.min_x'),
+            'max_x' => __('statamic-charfield::fieldtypes.max_x'),
+            'current' => __('statamic-charfield::fieldtypes.current'),
+        ];
+    }
+
+
     protected function configFieldItems(): array
     {
         return [
-            'translations' => [
-                'type' => 'hidden',
-                'default' => [
-                    'ideal_x' => __('statamic-charfield::fieldtypes.ideal_x'),
-                    'min_x' => __('statamic-charfield::fieldtypes.min_x'),
-                    'max_x' => __('statamic-charfield::fieldtypes.max_x'),
-                    'current' => __('statamic-charfield::fieldtypes.current'),
-                ],
-            ],
             'input_type' => [
                 'display' => __('statamic-charfield::fieldtypes.input_type'),
                 'type' => 'select',

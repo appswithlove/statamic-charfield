@@ -6,6 +6,7 @@ Statamic.booting(() => {
       fieldId: String,
       isReadOnly: Boolean,
       value: String,
+      meta: { type: Object, default: () => ({}) },
     },
 
     data() {
@@ -32,19 +33,19 @@ Statamic.booting(() => {
         return 'status-good';
       },
       idealText() {
-        const t = this.config.translations.ideal_x;
+        const t = this.meta.ideal_x;
         return t.replace(':min', this.optimalMin).replace(':max', this.optimalMax);
       },
       minText() {
-        const t = this.config.translations.min_x;
+        const t = this.meta.min_x;
         return t.replace(':min', this.optimalMin);
       },
       maxText() {
-        const t = this.config.translations.max_x;
+        const t = this.meta.max_x;
         return t.replace(':max', this.optimalMax || this.high);
       },
       currentText() {
-        return this.config.translations.current;
+        return this.meta.current;
       }
     },
 
