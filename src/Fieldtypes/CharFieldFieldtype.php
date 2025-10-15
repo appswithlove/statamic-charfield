@@ -19,7 +19,6 @@ class CharFieldFieldtype extends Fieldtype
         ];
     }
 
-
     protected function configFieldItems(): array
     {
         return [
