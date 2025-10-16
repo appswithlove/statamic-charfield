@@ -6,7 +6,6 @@ Statamic.booting(() => {
       fieldId: String,
       isReadOnly: Boolean,
       value: String,
-      meta: { type: Object, default: () => ({}) },
     },
 
     data() {
@@ -33,19 +32,16 @@ Statamic.booting(() => {
         return 'status-good';
       },
       idealText() {
-        const t = this.meta.ideal_x;
-        return t.replace(':min', this.optimalMin).replace(':max', this.optimalMax);
+        return __("statamic-charfield::fieldtypes.ideal_x").replace(':min', this.optimalMin).replace(':max', this.optimalMax);
       },
       minText() {
-        const t = this.meta.min_x;
-        return t.replace(':min', this.optimalMin);
+        return __("statamic-charfield::fieldtypes.min_x").replace(':min', this.optimalMin);
       },
       maxText() {
-        const t = this.meta.max_x;
-        return t.replace(':max', this.optimalMax || this.high);
+        return __("statamic-charfield::fieldtypes.max_x").replace(':max', this.optimalMax || this.high);
       },
       currentText() {
-        return this.meta.current;
+        return __('statamic-charfield::fieldtypes.current');
       }
     },
 
@@ -94,7 +90,7 @@ Statamic.booting(() => {
             <small v-if="optimalMin && optimalMax">{{ idealText }}</small>
             <small v-else-if="optimalMin && !optimalMax">{{ minText }}</small>
             <small v-else-if="!optimalMin && (optimalMax || high)">{{ maxText }}</small>
-            <small> &gt; {{ currentText }} <strong>{{ dataLength }}</strong></small>
+            <small> &gt; {{ currentText }} <strong>{{ internalValue.length }}</strong></small>
           </p>
         </div>
       </div>
