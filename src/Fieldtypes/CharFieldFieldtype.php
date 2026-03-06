@@ -7,6 +7,7 @@ use Statamic\Fields\Fieldtype;
 class CharFieldFieldtype extends Fieldtype
 {
     protected $icon = 'integer';
+    protected $component = 'char_field';
 
     protected function configFieldItems(): array
     {
